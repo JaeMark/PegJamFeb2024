@@ -15,7 +15,6 @@ public class ObjectClicker : MonoBehaviour
                 ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
                 if (clickableObject != null)
                 {
-                    // Object clicked, handle it
                     clickableObject.OnClicked();
                 }
             }

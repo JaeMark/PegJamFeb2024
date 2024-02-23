@@ -8,18 +8,14 @@ public class ClickableObject : MonoBehaviour
     private float radius = 0.5f;
     public float Radius => radius;
 
-    [SerializeField]
-    private Vector3 velocity = Vector3.down;
-    public Vector3 Velocity { get => velocity; set => velocity = value; }
-
-    private void Update()
+    private void OnMouseDown()
     {
-        transform.position += velocity * Time.deltaTime;
+        OnClicked();
     }
 
-    // Optional: Handle click events
     public virtual void OnClicked()
     {
         Debug.Log("Object clicked: " + gameObject.name);
+        Destroy(gameObject); // Destroy the object when clicked
     }
 }
