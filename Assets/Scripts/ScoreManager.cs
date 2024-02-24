@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -25,14 +26,27 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    // Your score variable
+    // Event triggered whenever the score changes
+    public UnityAction<int> OnScoreChanged;
+
     private int score = 0;
 
     // Public property to access the score
     public int Score
     {
         get { return score; }
-        set { score = value; }
+        private set
+        {
+            score = value;
+            // Trigger the score change event
+            OnScoreChanged?.Invoke(score);
+        }
+    }
+
+    // Method to update the score
+    public void IncreaseScore(int amount)
+    {
+        Score += amount;
     }
 
     private void Awake()
@@ -46,11 +60,5 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    // Example method to increase the score
-    public void IncreaseScore(int amount)
-    {
-        score += amount;
     }
 }

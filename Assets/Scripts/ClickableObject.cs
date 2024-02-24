@@ -19,9 +19,26 @@ public class ClickableObject : MonoBehaviour
 
     public virtual void OnClicked()
     {
-        ScoreManager.Instance.IncreaseScore(score);
+        // Check if ScoreManager.Instance is not null before using it
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.IncreaseScore(score);
+        }
+        else
+        {
+            Debug.LogError("ScoreManager.Instance is null!");
+        }
+
         Debug.Log("Object clicked: " + gameObject.name);
-        Debug.Log("New Score: " + ScoreManager.Instance.Score);
-        Destroy(gameObject); // Destroy the object when clicked
+
+        // Check if gameObject is not null before destroying it
+        if (gameObject != null)
+        {
+            Destroy(gameObject); // Destroy the object when clicked
+        }
+        else
+        {
+            Debug.LogError("gameObject is null!");
+        }
     }
 }
