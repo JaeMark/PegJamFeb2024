@@ -15,8 +15,6 @@ public struct RandomForceAndAngle
     public float maxAngle;
 }
 
-
-
 public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField]
