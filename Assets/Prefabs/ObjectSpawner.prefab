@@ -46,17 +46,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefabs:
   - prefab: {fileID: 4829499380216915764, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
-    weight: 0.45
+    weight: 0.4
   - prefab: {fileID: 508765431540342552, guid: cefd05ccf4f50cb40a7824d478d7865e, type: 3}
-    weight: 0.35
+    weight: 0.4
   - prefab: {fileID: 8782410402820213295, guid: 8a578dd08b9c35940af8610056699912, type: 3}
-    weight: 0.15
+    weight: 0.175
   - prefab: {fileID: 1487231022142393990, guid: b98acf5a055faba4bb32945af5241087, type: 3}
-    weight: 0.05
+    weight: 0.025
   forceAndAngle:
     minForce: 12
     maxForce: 14
     minAngle: 60
     maxAngle: 120
-  spawnInterval: 2
   xOffset: 5
+  initialSpawnInterval: 1.8
+  intervalDecreaseRate: 0.04
+  minSpawnInterval: 0.4
+  speedChangeScoreThreshold: 300

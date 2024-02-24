@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct RandomForceAndAngle
@@ -32,19 +33,37 @@ public class ObjectSpawner : MonoBehaviour
     private RandomForceAndAngle forceAndAngle;
 
     [SerializeField]
-    private float spawnInterval = 2f;
+    private float xOffset = 5.0f;
 
     [SerializeField]
-    private float xOffset = 5.0f;
+    private float initialSpawnInterval = 2f; // Initial spawn interval
+
+    [SerializeField]
+    private float intervalDecreaseRate = 0.1f; // Rate at which spawn interval decreases
+
+    [SerializeField]
+    private float minSpawnInterval = 0.2f; // Minimum spawn interval
+
+    [SerializeField]
+    private float speedChangeScoreThreshold = 500.0f; // Minimum spawn interval
+
+
+    private float spawnInterval; // Current spawn interval
 
     private float totalWeight; // Total weight of all object prefabs
 
     private float timer = 0f;
 
+    private int score = 0; // Current score
+    private int lastScoreUpdate = 0; // Last score update
+
     private void Start()
     {
         // Calculate the total weight of all object prefabs
         totalWeight = objectPrefabs.Sum(obj => obj.weight);
+
+        // Set the initial spawn interval
+        spawnInterval = initialSpawnInterval;
     }
 
     private void Update()
@@ -54,7 +73,20 @@ public class ObjectSpawner : MonoBehaviour
         if (timer >= spawnInterval)
         {
             SpawnObject();
+
+            Debug.LogError(spawnInterval);
             timer = 0f;
+        }
+
+        if (ScoreManager.Instance != null && ScoreManager.Instance.Score - lastScoreUpdate >= speedChangeScoreThreshold)
+        {
+            // Update the spawn interval
+            spawnInterval -= intervalDecreaseRate;
+
+            // Clamp the spawn interval to the minimum value
+            spawnInterval = Mathf.Max(spawnInterval, minSpawnInterval);
+
+            lastScoreUpdate = ScoreManager.Instance.Score;
         }
     }
 
