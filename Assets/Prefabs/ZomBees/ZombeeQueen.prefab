@@ -62,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436687563189363135, guid: 8a578dd08b9c35940af8610056699912, type: 3}
       propertyPath: score
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 8782410402820213295, guid: 8a578dd08b9c35940af8610056699912, type: 3}
       propertyPath: m_Name
-      value: ZombeeQueen Variant
+      value: ZombeeQueen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

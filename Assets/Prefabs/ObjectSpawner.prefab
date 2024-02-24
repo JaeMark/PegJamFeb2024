@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8639486346956658597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4688658, y: -0.3804964, z: 0.035812177}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,21 +45,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefabs:
-  - prefab: {fileID: 4829499380216915764, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
-    weight: 0.4
   - prefab: {fileID: 508765431540342552, guid: cefd05ccf4f50cb40a7824d478d7865e, type: 3}
-    weight: 0.4
+    weight: 0.35
   - prefab: {fileID: 8782410402820213295, guid: 8a578dd08b9c35940af8610056699912, type: 3}
     weight: 0.175
   - prefab: {fileID: 1487231022142393990, guid: b98acf5a055faba4bb32945af5241087, type: 3}
     weight: 0.025
+  - prefab: {fileID: 5072042274538803255, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+    weight: 0.3
+  - prefab: {fileID: 7161700283123022637, guid: 65250284dd062ac41834435d551f274e, type: 3}
+    weight: 0.14
+  - prefab: {fileID: 5763014996767961478, guid: 87937909e1516b54aa816b8ee5727189, type: 3}
+    weight: 0.01
   forceAndAngle:
     minForce: 12
     maxForce: 14
     minAngle: 60
     maxAngle: 120
   xOffset: 5
-  initialSpawnInterval: 1.8
-  intervalDecreaseRate: 0.04
-  minSpawnInterval: 0.4
-  speedChangeScoreThreshold: 300
+  initialSpawnInterval: 1.5
+  intervalDecreaseRate: 0.025
+  minSpawnInterval: 0.25
+  speedChangeScoreThreshold: 250
