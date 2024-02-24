@@ -26,6 +26,9 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField]
     private float spawnInterval = 2f;
 
+    [SerializeField]
+    private float xOffset = 5.0f;
+
     private float timer = 0f;
 
     private void Update()
@@ -41,8 +44,12 @@ public class ObjectSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        // Instantiate a new object
-        GameObject newObject = Instantiate(objectPrefab, transform.position, Quaternion.identity);
+        // Apply offset to the random x position
+        float randomX = Random.Range(-xOffset, xOffset);
+
+        // Instantiate a new object at the random x position
+        GameObject newObject = Instantiate(objectPrefab, new Vector3(randomX, transform.position.y, transform.position.z), Quaternion.identity);
+
 
         // Apply random force and angle
         Rigidbody2D rb = newObject.GetComponent<Rigidbody2D>();
