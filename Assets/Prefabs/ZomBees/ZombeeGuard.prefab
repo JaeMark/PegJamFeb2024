@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508765431540342552, guid: cefd05ccf4f50cb40a7824d478d7865e, type: 3}
       propertyPath: m_Name
-      value: ZombeeGuard Variant
+      value: ZombeeGuard
       objectReference: {fileID: 0}
     - target: {fileID: 4862861860727501960, guid: cefd05ccf4f50cb40a7824d478d7865e, type: 3}
       propertyPath: score
-      value: 200
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 6209242430885837005, guid: cefd05ccf4f50cb40a7824d478d7865e, type: 3}
       propertyPath: m_LocalScale.x

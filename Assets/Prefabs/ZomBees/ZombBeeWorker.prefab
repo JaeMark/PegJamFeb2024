@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 496902398166641160, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
       propertyPath: m_Name
-      value: Bee Variant
+      value: ZombBeeWorker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798161502010065304, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: score
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 6323489799349816797, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
       propertyPath: m_LocalPosition.x

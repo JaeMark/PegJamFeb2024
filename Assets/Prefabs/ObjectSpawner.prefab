@@ -58,8 +58,8 @@ MonoBehaviour:
   - prefab: {fileID: 5763014996767961478, guid: 87937909e1516b54aa816b8ee5727189, type: 3}
     weight: 0.01
   forceAndAngle:
-    minForce: 12
-    maxForce: 14
+    minForce: 18
+    maxForce: 23
     minAngle: 60
     maxAngle: 120
   xOffset: 5

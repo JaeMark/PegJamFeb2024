@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122729935810768442, guid: 7f40e0a55e5ee894787123ca71d080d8, type: 3}
       propertyPath: m_Name
-      value: BeeBase Variant
+      value: ZomBeeBase
       objectReference: {fileID: 0}
     - target: {fileID: 5499358865924868591, guid: 7f40e0a55e5ee894787123ca71d080d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 5499358865924868591, guid: 7f40e0a55e5ee894787123ca71d080d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414911264439813546, guid: 7f40e0a55e5ee894787123ca71d080d8, type: 3}
+      propertyPath: score
+      value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
