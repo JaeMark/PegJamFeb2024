@@ -82,27 +82,31 @@ PrefabInstance:
       objectReference: {fileID: 8782410402820213295, guid: 8a578dd08b9c35940af8610056699912, type: 3}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 3625908913793720804}
+      objectReference: {fileID: 833041225962683811}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
+      value: ChangeCollisionLayer
       objectReference: {fileID: 0}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: CollisionLayerChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
+      propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: ZomBee
       objectReference: {fileID: 0}
     - target: {fileID: 2895288495010472896, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
       propertyPath: onZomBeeCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -184,6 +188,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6368152077576108929}
   m_SourcePrefab: {fileID: 100100000, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
+--- !u!114 &833041225962683811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8852821774192507763, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
+  m_PrefabInstance: {fileID: 8166157431732471504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e312d4df61900499863f6b642aba02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2033625048459111671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7884931996775442983, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
@@ -224,8 +239,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4.25, y: 5}
   m_Direction: 0
---- !u!1 &3625908913793720804 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4829499380216915764, guid: 7f748b2cdf47f5e4183da7797c67a4b1, type: 3}
-  m_PrefabInstance: {fileID: 8166157431732471504}
-  m_PrefabAsset: {fileID: 0}
