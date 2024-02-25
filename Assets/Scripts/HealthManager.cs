@@ -49,7 +49,10 @@ public class HealthManager : MonoBehaviour
     public void UpdateHealth(int amount)
     {
         Health += amount;
-        onDeathEvent.Invoke();
+        if (onDeathEvent != null)
+        {
+            onDeathEvent.Invoke();
+        }
     }
 
     private void Awake()
