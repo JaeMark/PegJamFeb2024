@@ -12,29 +12,37 @@ PrefabInstance:
       propertyPath: score
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 1674832862696378294, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: newBody
+      value: 
+      objectReference: {fileID: 1487231022142393990, guid: b98acf5a055faba4bb32945af5241087, type: 3}
+    - target: {fileID: 1674832862696378294, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: newForm
+      value: 
+      objectReference: {fileID: 1487231022142393990, guid: b98acf5a055faba4bb32945af5241087, type: 3}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4688658
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3804964
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.035812177
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64,9 +72,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1677403885270480866, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068289914570944314, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068289914570944314, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068289914570944314, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5072042274538803255, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
       propertyPath: m_Name
-      value: QueenBee
+      value: BeeQueen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496998411691056420, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630293339548077945, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: score
+      value: -800
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797004088630948513, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797004088630948513, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797004088630948513, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797004088630948513, guid: 8623235fa8794cb4787ca198735180c2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,12 +5,7 @@ using UnityEngine;
 public class ClickableObject : MonoBehaviour
 {
     [SerializeField]
-    private float radius = 0.5f;
-
-    [SerializeField]
     private int score = 100;
-
-    public float Radius => radius;
 
     private void OnMouseDown()
     {

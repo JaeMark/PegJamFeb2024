@@ -53,8 +53,6 @@ public class ObjectSpawner : MonoBehaviour
     private float totalWeight; // Total weight of all object prefabs
 
     private float timer = 0f;
-
-    private int score = 0; // Current score
     private int lastScoreUpdate = 0; // Last score update
 
     private void Start()
@@ -73,8 +71,6 @@ public class ObjectSpawner : MonoBehaviour
         if (timer >= spawnInterval)
         {
             SpawnObject();
-
-            Debug.LogError(spawnInterval);
             timer = 0f;
         }
 
@@ -104,8 +100,10 @@ public class ObjectSpawner : MonoBehaviour
         // Instantiate a new object at the random x position
         GameObject newObject = Instantiate(objectPrefab, new Vector3(randomX, transform.position.y, transform.position.z), Quaternion.identity);
 
-        // Apply random force and angle
+        // Get the Rigidbody2D component from the child GameObject called "Body"
         Rigidbody2D rb = newObject.GetComponent<Rigidbody2D>();
+
+        // Apply random force and angle
         float force = Random.Range(forceAndAngle.minForce, forceAndAngle.maxForce);
         float angle = Random.Range(forceAndAngle.minAngle, forceAndAngle.maxAngle);
         Vector2 forceVector = Quaternion.Euler(0, 0, angle) * Vector2.right * force;
