@@ -12,10 +12,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombBeeWorker
       objectReference: {fileID: 0}
+    - target: {fileID: 3220738263232333982, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220738263232333982, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220738263232333982, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220738263232333982, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938605553526112650, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_Size.x
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938605553526112650, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4798161502010065304, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
       propertyPath: score
       value: -200
       objectReference: {fileID: 0}
+    - target: {fileID: 4951651850448179464, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f74f605f585937a4fa51efe96e8bb6cb, type: 3}
     - target: {fileID: 6323489799349816797, guid: ba069f66fb36ca549b8adcc641e1c810, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
