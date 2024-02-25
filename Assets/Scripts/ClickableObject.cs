@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ClickableObject : MonoBehaviour
 {
     [SerializeField]
     private int score = 100;
+
+    [SerializeField]
+    private UnityEvent onClickedEvent;
 
     private void OnMouseDown()
     {
@@ -14,6 +18,11 @@ public class ClickableObject : MonoBehaviour
 
     public virtual void OnClicked()
     {
+        if (onClickedEvent != null)
+        {
+            onClickedEvent.Invoke();
+        }
+
         // Check if ScoreManager.Instance is not null before using it
         if (ScoreManager.Instance != null)
         {

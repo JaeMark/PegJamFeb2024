@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class HealthManager : MonoBehaviour
 {
     private static HealthManager instance;
+    private UnityEvent onDeathEvent;
 
     // Public property to access the instance
     public static HealthManager Instance
@@ -37,7 +38,10 @@ public class HealthManager : MonoBehaviour
         get { return health; }
         private set
         {
-            // Trigger the health change event
+            // Update the health value
+            health = value;
+
+            // Trigger the health change event with the new value
             OnHealthChanged?.Invoke(health);
         }
     }
@@ -45,6 +49,7 @@ public class HealthManager : MonoBehaviour
     public void UpdateHealth(int amount)
     {
         Health += amount;
+        onDeathEvent.Invoke();
     }
 
     private void Awake()

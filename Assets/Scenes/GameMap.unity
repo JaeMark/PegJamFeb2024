@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 246957082}
   - component: {fileID: 246957084}
   - component: {fileID: 246957083}
+  - component: {fileID: 246957085}
   m_Layer: 5
   m_Name: LifeCount
   m_TagString: Untagged
@@ -260,6 +261,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246957081}
   m_CullTransparentMesh: 1
+--- !u!114 &246957085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246957081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae21817a77a280468ab311be167b288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statType: 0
+  textPrefix: 'Lives: '
 --- !u!1001 &270542815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -882,6 +897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae21817a77a280468ab311be167b288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statType: 1
+  textPrefix: 'Score: '
 --- !u!1001 &2144488431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1078,15 +1095,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1887450083953805480, guid: 74672ec17c4e4be46a2f32e8857a4c3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4688658
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1887450083953805480, guid: 74672ec17c4e4be46a2f32e8857a4c3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3804964
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1887450083953805480, guid: 74672ec17c4e4be46a2f32e8857a4c3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.035812177
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1887450083953805480, guid: 74672ec17c4e4be46a2f32e8857a4c3c, type: 3}
       propertyPath: m_LocalRotation.w
