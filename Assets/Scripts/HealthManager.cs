@@ -6,7 +6,11 @@ using UnityEngine.Events;
 public class HealthManager : MonoBehaviour
 {
     private static HealthManager instance;
+
+    [SerializeField]
     private UnityEvent onDeathEvent;
+    [SerializeField]
+    private UnityEvent onTakeDamageEvent;
 
     // Public property to access the instance
     public static HealthManager Instance
@@ -49,6 +53,12 @@ public class HealthManager : MonoBehaviour
     public void UpdateHealth(int amount)
     {
         Health += amount;
+        
+        if(onTakeDamageEvent != null)
+        {
+            onTakeDamageEvent.Invoke();
+        }
+
         if (onDeathEvent != null)
         {
             onDeathEvent.Invoke();

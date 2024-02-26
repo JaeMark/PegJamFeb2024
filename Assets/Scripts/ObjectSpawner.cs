@@ -101,13 +101,16 @@ public class ObjectSpawner : MonoBehaviour
         GameObject newObject = Instantiate(objectPrefab, new Vector3(randomX, transform.position.y, transform.position.z), Quaternion.identity);
 
         // Get the Rigidbody2D component from the child GameObject called "Body"
-        Rigidbody2D rb = newObject.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = newObject.GetComponentInChildren<Rigidbody2D>();
 
         // Apply random force and angle
         float force = Random.Range(forceAndAngle.minForce, forceAndAngle.maxForce);
         float angle = Random.Range(forceAndAngle.minAngle, forceAndAngle.maxAngle);
         Vector2 forceVector = Quaternion.Euler(0, 0, angle) * Vector2.right * force;
         rb.AddForce(forceVector, ForceMode2D.Impulse);
+
+        // Set the rotation based on the launch angle
+        newObject.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
     }
 
     private GameObject ChooseObjectPrefab(float randomWeight)

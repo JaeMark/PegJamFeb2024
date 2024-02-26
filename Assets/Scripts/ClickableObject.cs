@@ -9,7 +9,18 @@ public class ClickableObject : MonoBehaviour
     private int score = 100;
 
     [SerializeField]
+    private float killY = -10;
+
+    [SerializeField]
     private UnityEvent onClickedEvent;
+
+    private void Update()
+    {
+        if (transform.position.y <= killY)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnMouseDown()
     {
