@@ -54,14 +54,19 @@ public class HealthManager : MonoBehaviour
     {
         Health += amount;
         
-        if(onTakeDamageEvent != null)
+        if (Health > 0)
         {
-            onTakeDamageEvent.Invoke();
+            if (onTakeDamageEvent != null)
+            {
+                onTakeDamageEvent.Invoke();
+            }
         }
-
-        if (onDeathEvent != null)
+        else
         {
-            onDeathEvent.Invoke();
+            if (onDeathEvent != null)
+            {
+                onDeathEvent.Invoke();
+            }
         }
     }
 
