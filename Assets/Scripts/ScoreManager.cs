@@ -7,6 +7,9 @@ public class ScoreManager : MonoBehaviour
 {
     private static ScoreManager instance;
 
+    [SerializeField]
+    private UnityEvent onScoreEvent;
+
     // Public property to access the instance
     public static ScoreManager Instance
     {
@@ -47,6 +50,10 @@ public class ScoreManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         Score += amount;
+        if (Score < 0 && onScoreEvent != null)
+        {
+            onScoreEvent.Invoke();
+        }
     }
 
     private void Awake()
