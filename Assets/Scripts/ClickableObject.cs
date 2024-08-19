@@ -18,7 +18,7 @@ public class ClickableObject : MonoBehaviour
     {
         if (transform.position.y <= killY)
         {
-            Destroy(gameObject);
+            DestroyObject();
         }
     }
 
@@ -29,11 +29,6 @@ public class ClickableObject : MonoBehaviour
 
     public virtual void OnClicked()
     {
-        if (onClickedEvent != null)
-        {
-            onClickedEvent.Invoke();
-        }
-
         // Check if ScoreManager.Instance is not null before using it
         if (ScoreManager.Instance != null)
         {
@@ -46,10 +41,28 @@ public class ClickableObject : MonoBehaviour
 
         Debug.Log("Object clicked: " + gameObject.name);
 
+        if (onClickedEvent != null)
+        {
+            onClickedEvent.Invoke();
+        }
+
+        DestroyObject();
+    }
+
+    public virtual void DestroyObject()
+    {
         // Check if gameObject is not null before destroying it
         if (gameObject != null)
         {
-            Destroy(gameObject); // Destroy the object when clicked
+            // Find the highest parent in the hierarchy
+            Transform highestParent = transform;
+            while (highestParent.parent != null)
+            {
+                highestParent = highestParent.parent;
+            }
+
+            // Destroy the highest parent game object
+            Destroy(highestParent.gameObject);
         }
         else
         {
